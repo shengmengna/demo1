@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>商品查询</title>
+</head>
+<body>
+<h1>55555555555555555555555555555</h1>
+[[${comm.size()}]]
+<table>
+	<thead>
+		<tr>
+			<td>名字</td>
+			<td>价格</td>
+			<td>数量</td>
+			<td>型号</td>
+		</tr>
+	</thead>
+	<tbody th:remove="all-but-first">
+		<tr th:each="comm:${comm}">
+			<td th:text="${comm.cname}">海尔冰箱</td>
+			<td th:text="${comm.price}">3999</td>
+			<td th:text="${comm.num}">10</td>
+			<td th:text="${comm.typename}">HR-102</td>
+		</tr>
+		<tr>
+			<td>名字</td>
+			<td>价格</td>
+			<td>数量</td>
+			<td>型号</td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>
